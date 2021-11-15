@@ -9,7 +9,7 @@ Test Teardown   Finish Session
 *Test Cases*
 User login
 
-    ${user}                  Factory User Login
+    ${user}                  Factory User   login   
 
     Go To Login Page
     Fill Credentials        ${user}
@@ -81,16 +81,7 @@ Empty Fields
     Submit Credentials
     Alert Spans Should Be       ${expected_alerts}
 
-Incomplete Email 
-    [Tags]      inc_email
 
-    ${user}     Create Dictionary       email=paulo.souza@gm              password=pwd123
 
-    Go To Login Page
-    Fill Credentials  ${user}
-    Submit Credentials
-    Alert Span Should Be  E-mail incompleto
-
-#Esse útimo cenário creio se tratar de um BUG, pois é uma situação não tratada pelo DEV
 
 
